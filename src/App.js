@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const Page = ({ offset, caption, first, second, gradient, onClick }) => (
+const Page = ({ offset, caption, first, second, third = "", gradient, onClick }) => (
   <React.Fragment>
-    <Parallax.Layer offset={offset} speed={0.2} onClick={onClick}>
+    <Parallax.Layer offset={offset} speed={0.2}>
       <div className="slopeBegin" />
     </Parallax.Layer>
 
@@ -23,6 +23,7 @@ const Page = ({ offset, caption, first, second, gradient, onClick }) => (
         <div className={`stripe ${gradient}`} />
         <div className="innerText"><p>{first}</p></div>
         <div className="innerText"><p>{second}</p></div>
+        <div className="innerText"><p>{third}</p></div>
       </span>
     </Parallax.Layer>
   </React.Fragment>
@@ -38,21 +39,24 @@ class App extends React.Component {
           gradient="pink"
           caption="who am I"
           first="Antonin Ribeaud"
-          second=""
+          second="Developer @ Deezer"
+          third="Blockchain enthusiast"
           onClick={() => this.scroll(1)} />
         <Page
           offset={1}
           gradient="teal"
           caption="what I do"
           first="I build cool apps"
-          second="Node, React, GraphQL 🚀"
+          second="I use Node, GraphQL"
+          third="React(Native), Redux 🚀 "
           onClick={() => this.scroll(2)} />
         <Page
           offset={2}
           gradient="tomato"
           caption="where I am"
-          first="github"
-          second="linkedin"
+          first="github.com/antonhansel"
+          second="linkedin.com/in/antoninribeaud"
+          third="twitter.com/antoninarto"
           onClick={() => this.scroll(0)} />
       </Parallax>
     )
