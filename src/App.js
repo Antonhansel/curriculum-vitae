@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
@@ -19,18 +18,27 @@ const Page = ({ offset, caption, first, second, third = "", gradient, onClick })
 
     <Parallax.Layer className="text header" offset={offset} speed={0.4}>
       <span>
-        <p style={{ fontSize: 25 }}>{caption}</p>
+        <p style={{ fontSize: '3vw' }}>{caption}</p>
         <div className={`stripe ${gradient}`} />
-        <div className="innerText"><p>{first}</p></div>
-        <div className="innerText"><p>{second}</p></div>
-        <div className="innerText"><p>{third}</p></div>
+        <div className="innerText">{first}</div>
+        <div className="innerText">{second}</div>
+        <div className="innerText">{third}</div>
       </span>
     </Parallax.Layer>
   </React.Fragment>
 )
 
+let index = 0;
+
 class App extends React.Component {
-  scroll = to => this.refs.parallax.scrollTo(to)
+  scroll = to => {
+    if (index < 2) {
+      index += 1;
+    } else {
+      index = 0;
+    }
+    this.refs.parallax.scrollTo(to);
+  };
   render() {
     return (
       <Parallax className="container" ref="parallax" pages={3} horizontal scrolling={false}>
@@ -38,26 +46,36 @@ class App extends React.Component {
           offset={0}
           gradient="pink"
           caption="who am I"
-          first="Antonin Ribeaud"
-          second="Developer @ Deezer"
-          third="Blockchain enthusiast"
-          onClick={() => this.scroll(1)} />
+          first={<p>Antonin Ribeaud</p>}
+          second={<p>Engineer @ Deezer</p>}
+          third={<p>Blockchain hobbyist</p>}
+          onClick={() => this.scroll(index)} />
         <Page
           offset={1}
           gradient="teal"
           caption="what I do"
-          first="I build cool apps"
-          second="I use Node, GraphQL"
-          third="React(Native), Redux 🚀 "
-          onClick={() => this.scroll(2)} />
+          first={<p>I build cool apps</p>}
+          second={<p>I use Node, GraphQL</p>}
+          third={<p>React(Native), Redux 🚀 </p>}
+          onClick={() => this.scroll(index)} />
         <Page
           offset={2}
           gradient="tomato"
-          caption="where I am"
-          first="github.com/antonhansel"
-          second="linkedin.com/in/antoninribeaud"
-          third="twitter.com/antoninarto"
-          onClick={() => this.scroll(0)} />
+          caption="where to find me"
+          first={
+            <div style={{paddingTop: '2vh'}}>
+              <a href="https://github.com/antonhansel">
+                <img src="./GitHub_Logo.png" width='70vw' height='70vh' alt="github"/>
+              </a>
+              <a href="https://www.linkedin.com/in/antoninribeaud/">
+                <img src="./LinkedIn_Logo.png" width='70vw' height='70vh' alt="linkedin"/>
+              </a>
+              <a href="https://twitter.com/antoninarto">
+                <img src="./Twitter_Logo.png" width='70vw' height='70vh' alt="twitter"/>
+              </a>
+            </div>
+          }
+          />
       </Parallax>
     )
   }

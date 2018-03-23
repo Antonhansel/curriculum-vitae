@@ -1,9 +1,21 @@
+img {
+  padding: 1vw;
+  position: relative;
+}
+
+
+
 .container > div > div {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
+  a {
+    position: relative;
+    z-index: 1000;
+  }
+
   .text {
     pointer-events: none;
     justify-content: start !important;
@@ -12,11 +24,11 @@
   }
   
   .innerText {
-    font-size: 50px;
+    font-size: 5vw;
   }
 
   .number {
-    font-size: 450px;
+    font-size: 45vw;
     color: #373c4c;
   }
   
@@ -27,25 +39,22 @@
   }
   
   .header {
-    margin-left: 350px;
-    font-size: 70px;
+    margin-left: 35vw;
     color: white;
-    /* text-transform: uppercase; */
-    
   }
   
   .stripe {
-    height: 2px;
-    width: 400px;
+    height: 0.3vw;
+    width: 30vw;
   }
   
   .slopeBegin {
     background-color: #20232f;
-    clip-path: polygon(20vw 0, 80% 0, calc(80% - 20vw) 100%, 0 100%);
+    clip-path: polygon(20vw 0, 75% 0, calc(75% - 30vw) 100%, 0 100%);
   }
   
   .slopeEnd {
-    clip-path: polygon(80% 0, 100% 0, calc(100% - 20vw) 100%, calc(80% - 20vw) 100%);
+    clip-path: polygon(74% 0, 100% 0, calc(100% - 20vw) 100%, calc(74% - 30vw) 100%);
   }
   
   .slopeBegin,
@@ -57,11 +66,11 @@
   }
   
   .pink {
-    background: linear-gradient(to right, deeppink 0%, coral 100%);
+    background: linear-gradient(to right, #00F260 0%, #0575E6 100%);
   }
   
   .teal {
-    background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+    background: linear-gradient(to right, #fe8c00 0%, #f83600 100%);
   }
   
   .tomato {
