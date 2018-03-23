@@ -62,6 +62,7 @@ class App extends React.Component {
           offset={2}
           gradient="tomato"
           caption="where to find me"
+          onClick={() => this.scroll(index)}          
           first={
             <div style={{paddingTop: '2vh'}}>
               <a href="https://github.com/antonhansel">

@@ -1,5 +1,5 @@
 {
-  "name": "theodyssey.io",
+  "name": "curriculum-vitae",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,7 @@
     "react-scripts": "1.1.1",
     "react-spring": "^3.0.1"
   },
-  "homepage": "http://antonhansel.github.io/theodyssey.io",
+  "homepage": "http://antonhansel.github.io/curriculum-vitae",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
