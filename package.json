@@ -8,7 +8,7 @@
     "react-scripts": "1.1.1",
     "react-spring": "^3.0.1"
   },
-  "homepage": "http://antonhansel.github.io/curriculum-vitae",
+  "homepage": "http://antonhansel.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
