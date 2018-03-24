@@ -66,13 +66,13 @@ class App extends React.Component {
           first={
             <div style={{paddingTop: '2vh'}}>
               <a href="https://github.com/antonhansel">
-                <img src="./GitHub_Logo.png" width='70vw' height='70vh' alt="github"/>
+                <img src="/static/GitHub_Logo.png" width='70vw' height='70vh' alt="github"/>
               </a>
               <a href="https://www.linkedin.com/in/antoninribeaud/">
-                <img src="./LinkedIn_Logo.png" width='70vw' height='70vh' alt="linkedin"/>
+                <img src="/static/LinkedIn_Logo.png" width='70vw' height='70vh' alt="linkedin"/>
               </a>
               <a href="https://twitter.com/antoninarto">
-                <img src="./Twitter_Logo.png" width='70vw' height='70vh' alt="twitter"/>
+                <img src="/static/Twitter_Logo.png" width='70vw' height='70vh' alt="twitter"/>
               </a>
             </div>
           }
