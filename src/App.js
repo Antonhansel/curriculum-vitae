@@ -2,8 +2,12 @@ import React from 'react'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const Page = ({ offset, caption, first, second, third = "", gradient, onClick }) => (
-  <React.Fragment>
+const Page = ({ offset, caption, first, second, third = "", gradient, onClick }) => {
+  let className = "text header";
+  if (offset !== 2) {
+    className += " pointerEvents"
+  }
+  return (<React.Fragment>
     <Parallax.Layer offset={offset} speed={0.2}>
       <div className="slopeBegin" />
     </Parallax.Layer>
@@ -12,11 +16,11 @@ const Page = ({ offset, caption, first, second, third = "", gradient, onClick })
       <div className={`slopeEnd ${gradient}`} />
     </Parallax.Layer>
 
-    <Parallax.Layer className="text number" offset={offset} speed={0.3}>
+    <Parallax.Layer className="text number pointerEvents" offset={offset} speed={0.3}>
       <span>0{offset + 1}</span>
     </Parallax.Layer>
 
-    <Parallax.Layer className="text header" offset={offset} speed={0.4}>
+    <Parallax.Layer className={className} offset={offset} speed={0.4}>
       <span>
         <p style={{ fontSize: '3vw' }}>{caption}</p>
         <div className={`stripe ${gradient}`} />
@@ -25,8 +29,8 @@ const Page = ({ offset, caption, first, second, third = "", gradient, onClick })
         <div className="innerText">{third}</div>
       </span>
     </Parallax.Layer>
-  </React.Fragment>
-)
+  </React.Fragment>);
+}
 
 let index = 0;
 

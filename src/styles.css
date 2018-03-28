@@ -16,8 +16,11 @@ img {
     z-index: 1000;
   }
 
-  .text {
+  .pointerEvents {
     pointer-events: none;
+  }
+
+  .text {
     justify-content: start !important;
     font-family: 'Open Sans', sans-serif;
     line-height: 0px;
