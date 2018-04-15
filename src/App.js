@@ -73,10 +73,10 @@ class App extends React.Component {
                 <img src="https://antonhansel.github.io/curriculum-vitae/GitHub_Logo.png" width='70vw' height='70vh' alt="github"/>
               </a>
               <a href="https://www.linkedin.com/in/antoninribeaud/">
-                <img src="https://antonhansel.github.io/curriculum-vitae/LinkedIn_Logo.png" width='70vw' height='70vh' alt="linkedin"/>
+                <img src="https://antonhansel.github.io/curriculum-vitae/li_Logo.png" width='70vw' height='70vh' alt="linkedin"/>
               </a>
               <a href="https://twitter.com/antoninarto">
-                <img src="https://antonhansel.github.io/curriculum-vitae/Twitter_Logo.png" width='70vw' height='70vh' alt="twitter"/>
+                <img src="https://antonhansel.github.io/curriculum-vitae/tw_Logo.png" width='70vw' height='70vh' alt="twitter"/>
               </a>
             </div>
           }
